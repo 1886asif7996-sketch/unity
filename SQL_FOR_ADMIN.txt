@@ -1,0 +1,9 @@
+-- RUN THIS IN SUPABASE SQL EDITOR TO MAKE YOURSELF AN ADMIN
+
+-- Replace 'your_email@example.com' with the email you just signed up with.
+UPDATE profiles 
+SET role = 'admin', status = 'active' 
+WHERE email = 'your_email@example.com';
+
+-- Verify it worked:
+SELECT * FROM profiles WHERE email = 'your_email@example.com';
